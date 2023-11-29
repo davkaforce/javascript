@@ -35,17 +35,20 @@
 // }
 
 // console.log(getGrade(50, 32, 98));
+//    /  - noogdwor
+//    %  - uldegdel
 
-// problem #1
+function problem1(a, b) {
+  let result1 = 2 * (a + b);
+  let result2 = a * b;
+  return result1 + result2 - "10";
+}
 
-// function problem1(a, b) {
-//   let result1 = 2 * (a + b);
-//   let result2 = a * b;
-//   return result1 + "and" + result2;
-// }
+let mainresult = problem1(5, 6);
+console.log(mainresult);
 
-// let mainresult = problem1(5, 6);
-// console.log(mainresult);
+// number + number = number
+//
 
 // problem #2
 
@@ -57,13 +60,36 @@
 
 // problem #3
 
-function problem3(x) {
-  result = 4 * x ** 2 - 3 * x + 5;
-  return result;
+// function problem3(x) {
+//   result = 4 * x ** 2 - 3 * x + 5;
+//   return result;
+// }
+// p3_output = problem3(1);
+
+// console.log(p3_output);
+
+// problem classroom
+
+function functionA(num1, num2, operation) {
+  let answer;
+  if (operation == "+") {
+    answer = num1 + num2;
+  }
+  return answer;
 }
-p3_output = problem3(1);
-console.log(p3_output);
 
-// problem 7202
+function functionB(num1, num2, operation) {
+  if (operation == "+") {
+    return num1 + num2;
+  }
+}
 
-function functionA()
+resultA = functionA(2, 2, "+");
+resultB = functionB(2, 3, "+");
+console.log("result of functionA is", resultA);
+console.log("result of functionB is", resultB);
+
+// scope
+
+// global scope - without any bracket
+// local scope - with curly bracket/

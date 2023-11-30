@@ -128,6 +128,10 @@
 // const nums = numArr.map(n => parseInt(n));
 // console.log(nums); // [7, 8, 4]
 
+function randomnumber() {
+  return 100;
+}
+
 function hourminsec(num) {
   hour = (num - (num % 3600)) / 3600;
   min = ((num % 3600) - ((num % 3600) % 60)) / 60;
@@ -136,4 +140,14 @@ function hourminsec(num) {
   final = hour + "hour " + min + "min " + sec + "sec";
   return final;
 }
+
+function randomnumber() {
+  return 100;
+}
 console.log(hourminsec(154434));
+
+3700;
+
+min = 3700 % 60;
+
+console.log(min);

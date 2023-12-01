@@ -20,6 +20,9 @@
 //   return sum;
 // }
 
+// let huvisagch = 100;
+// console.log(huvisagch);
+
 // function getGrade(a, b, c) {
 //   let av = (a + b + c) / 3;
 //   if (av <= 60) {
@@ -32,7 +35,6 @@
 //     return "not defined";
 //   }
 //   return lettergrade;
-// }
 
 // console.log(getGrade(50, 32, 98));
 //    /  - noogdwor
@@ -133,21 +135,72 @@ function randomnumber() {
 }
 
 function hourminsec(num) {
-  hour = (num - (num % 3600)) / 3600;
-  min = ((num % 3600) - ((num % 3600) % 60)) / 60;
-  sec = num % 60;
-
-  final = hour + "hour " + min + "min " + sec + "sec";
+  time = {
+    hour: (num - (num % 3600)) / 3600,
+    min: ((num % 3600) - ((num % 3600) % 60)) / 60,
+    sec: num % 60,
+  };
+  final = time;
   return final;
 }
 
-function randomnumber() {
-  return 100;
-}
 console.log(hourminsec(154434));
 
-3700;
+console.log(randomnumber() * randomnumber());
 
-min = 3700 % 60;
+//Өт а алхмаар дээшилж  b алхмаар доошилно гэх зарчмаар дээш өгсдөг.
+// Тэгвэл өт хэдэн үйлдлийн дараа C өндөртэй модны оройд гарах вэ.
 
-console.log(min);
+// a=5 b=3 c=10
+
+// output: x=7
+
+// x(a - b) + a >= c &&
+// x(a - b) + a < c +(a-b)
+// x*(a-b)+a=c
+//
+// for (x=0, )
+//
+
+//
+
+function findX(a, b, c) {
+  let x = ((c - a - ((c - a) % (a - b))) / (a - b)) * 2 + 3;
+  return x;
+}
+
+console.log(findX(5, 3, 10));
+
+//
+
+function wormSteps(a, b, c) {
+  let steps = 0;
+  let current = 0;
+
+  while (current < c) {
+    current += a;
+    steps++;
+    if (current >= c) {
+      break;
+    }
+    current -= b;
+    steps++;
+  }
+
+  return steps;
+}
+
+let result = wormSteps(5, 3, 11);
+console.log(result);
+
+//
+
+//find factorial
+
+function factorial(n) {
+  if (n === 0) {
+    return 1;
+  } else {
+    return n * factorial(n - 1);
+  }
+}

@@ -52,13 +52,13 @@ console.log(sumOfN(6));
 // }
 // getDiscount(10);
 
-function getCategory() {
-  for (let i = 0; i < products.length; i++)
-    if (products[i].category == "electronic") {
-      console.log(products[i]);
-    }
-}
-getCategory();
+// function getCategory() {
+//   for (let i = 0; i < products.length; i++)
+//     if (products[i].category == "electronic") {
+//       console.log(products[i]);
+//     }
+// }
+// getCategory();
 
 // function ElecDiscount() {
 //   for (let i = 0; i < products.length; i++) {
@@ -70,13 +70,13 @@ getCategory();
 // }
 // ElecDiscount();
 
-let expensive = products[0].price;
-for (let i = 0; i <= products.length; i++) {
-  if (expensive < products[i].price) {
-    expensive = products[i].price;
-  }
-}
-console.log(expensive);
+// let expensive = products[0].price;
+// for (let i = 0; i <= products.length; i++) {
+//   if (expensive < products[i].price) {
+//     expensive = products[i].price;
+//   }
+// }
+// console.log(expensive);
 
 let products = [
   { name: "iphone", price: 1000, category: "electronic", stock: 20 },

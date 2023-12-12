@@ -78,3 +78,31 @@ function find_prime_numbers(min, max) {
 
 prime_array = find_prime_numbers(3, 20);
 console.log(prime_array);
+
+// create new arrays of array from long text
+
+let randomText =
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+
+function toArrays(Text) {
+  let firstArray = [];
+  firstArray = Text.split(" ");
+  let secondArray = [];
+  for (let c = 0; c < Math.floor(firstArray.length / 8); c++) {
+    secondArray[c] = [];
+    for (let i = 0; i < 8; i++) {
+      let z = c * 8 + i;
+      if (z < firstArray.length) {
+        secondArray[c][i] = firstArray[z];
+      }
+    }
+  }
+  return secondArray;
+}
+let result = toArrays(randomText);
+console.log(result);
+
+testValue1 = Math.floor(3.9);
+testValue2 = Math.ceil(3.4);
+console.log(testValue1);
+console.log(testValue2);

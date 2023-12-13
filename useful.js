@@ -59,3 +59,12 @@ function convertToArray(text) {
   for (let i = 0; i < singleArray.length; i++) {}
 }
 convertToArray(sentence);
+
+//function types
+function doSomething() {
+  console.log("doing something");
+}
+
+let doOther = () => {
+  console.log("other things");
+};

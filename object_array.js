@@ -78,12 +78,12 @@ console.log(sumOfN(6));
 // }
 // console.log(expensive);
 
-let products = [
-  { name: "iphone", price: 1000, category: "electronic", stock: 20 },
-  { name: "laptop", price: 800, category: "electronic", stock: 5 },
-  { name: "laptop", price: 600, category: "electronic", stock: 5 },
-  { name: "chair", price: 500, category: "non-electronic", stock: 5 },
-];
+// let products = [
+//   { name: "iphone", price: 1000, category: "electronic", stock: 20 },
+//   { name: "laptop", price: 800, category: "electronic", stock: 5 },
+//   { name: "laptop", price: 600, category: "electronic", stock: 5 },
+//   { name: "chair", price: 500, category: "non-electronic", stock: 5 },
+// ];
 
 let products = [
   {

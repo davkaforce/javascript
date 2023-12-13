@@ -44,6 +44,19 @@ console.log(prime_array);
 
 // alternative solution
 
-// function prime_number(n) {}
+// sum of odd numbers to n
 
-// 1-10
+// n + ((n + 1 - 2) / 2) ** 2;
+
+function sumOfOdd(n) {
+  if (n == 1) {
+    return 1;
+  }
+  if (n > 1) {
+    n = n - 1;
+  }
+  return sumOfOdd((n / 2) ** 2) + n;
+}
+
+let result = sumOfOdd(9);
+console.log(result);

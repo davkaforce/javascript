@@ -78,3 +78,12 @@ function find_prime_numbers(min, max) {
 
 prime_array = find_prime_numbers(3, 20);
 console.log(prime_array);
+
+// ogogdson sondgoi too
+
+// 1, 3, 5, 7, 9
+
+function drawSqr(size) {
+  
+}
+

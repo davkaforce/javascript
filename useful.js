@@ -68,3 +68,83 @@ function doSomething() {
 let doOther = () => {
   console.log("other things");
 };
+
+let mathOperation = (num1, num2, operation) => {
+  return operation(num1, num2);
+};
+
+const result = mathOperation(10, 20, doSomething);
+console.log(result);
+
+let newVar;
+
+// array methods
+
+let nums = [1, 4, 65, 2, 5, 12, 34, 71, 222, 13, 7];
+nums.sort((a, b) => b - a);
+console.log(nums);
+
+// array methods - sort, map, filter
+
+let product = [
+  (John = {
+    price: 30000000,
+    VAT: true,
+    passport: false,
+    identification: true,
+    debt: 800000,
+  }),
+  (Mary = {
+    price: 1900000,
+    VAT: true,
+    identification: true,
+    debt: 0,
+  }),
+];
+
+let newNumsA;
+let newNumsB;
+personData.sort((a, b) => a - b);
+newNumsA = personData.map();
+newNumsB = personData.filter((a) => {
+  return a % 2 == 0; //true or false avna
+});
+
+let products = [
+  { name: "iphone", price: 1000.1, category: "electronic", stock: 20 },
+  { name: "laptop", price: 800.1, category: "electronic", stock: 5 },
+  { name: "laptop", price: 1600.1, category: "electronic", stock: 5 },
+  { name: "chair", price: 500.1, category: "non-electronic", stock: 5 },
+];
+
+products.sort((a, b) => {
+  if (a.price > b.price) {
+    return -1;
+  } else {
+    return 1;
+  }
+});
+
+console.log(products);
+
+let newArray;
+newArray = products.map((a) => {
+  return a.price;
+});
+
+console.log(newArray);
+
+let secondArray;
+
+secondArray = products.filter((a) => {
+  return a.price > 700;
+});
+
+console.log(secondArray);
+
+let numsX = [1, 31, 5, 7, 4, 6, 23, 54];
+numsX.sort((a, b) => {
+  return b - a;
+});
+
+console.log(numsX);

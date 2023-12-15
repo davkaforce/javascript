@@ -112,5 +112,3 @@ console.log(testValue2);
 // ogogdson sondgoi too
 
 // 1, 3, 5, 7, 9
-
-function drawSqr(size) {}

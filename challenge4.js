@@ -172,19 +172,61 @@ function sortByRating(books) {
 
 function findByTitleLength(books) {
   let firstArray = [];
-  firstArray = books.filter((a) => a.title.length > 20);
+  firstArray = books.filter((a) => a.title.length > 10);
   return firstArray;
 }
 // console.log(findByTitleLength(bookData));
 
 // add summary on object by like this `A captivating book by ${book.author}
 
-function addSummary(books) {
-  let firstArray = books;
-  for (let i = 0; i < firstArray.length; i++) {
-    firstArray[i].summary = "first";
-  }
-  return firstArray;
+// function addSummary(books) {
+//   let firstArray = books;
+//   for (let i = 0; i < firstArray.length; i++) {
+//     firstArray[i].summary =
+//       "A " + firstArray[i].genre + " book by " + firstArray[i].author;
+//   }
+//   return firstArray;
+// }
+
+// console.log(addSummary(bookData));
+
+function addingSummaryByMap(books) {
+  let firstArray = [];
+  firstArray = books.map((a) => {
+    a.summary = a.genre + " book by " + a.author;
+    return a;
+  });
+  console.log(firstArray);
 }
 
-console.log(addSummary(bookData));
+// addingSummaryByMap(bookData);
+
+// Book title iin character length ni 10 aas ihiin awdag function bich, tedgeeriin price range iig ni oor function oor garga
+
+function priceRange(books) {
+  let moreThanTen = findByTitleLength(books);
+  let minPrice;
+  let maxPrice;
+  let temp = [];
+  temp = moreThanTen.map((a) => {
+    return a.price;
+  });
+  // console.log(temp);
+  minPrice = Math.min(...temp);
+  // console.log(minPrice);
+  maxPrice = Math.max(...temp);
+  // console.log(maxPrice);
+  return "The range is between " + minPrice + "-" + maxPrice;
+}
+console.log(priceRange(bookData));
+
+// 12 oos ih vnetei nomnuudaas rating ni 4.7 oos deesh rating tei nomnuudiig oldog function bich
+
+function filterByPriceAndRating(minPrice, minRating) {
+  let firstArray = bookData
+    .filter((a) => a.price > minPrice)
+    .filter((a) => a.rating > minRating);
+  console.log(firstArray);
+}
+
+filterByPriceAndRating(12, 4.8);

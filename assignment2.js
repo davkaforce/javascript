@@ -170,27 +170,3 @@ function topPerformers(rating) {
 
 let resultB = topPerformers(4.8);
 console.log(resultB);
-
-// teacher's solution
-
-// Task 1 High paid employee by department
-// const highPaidEmployees = (employees, department, thresholdSalary) => {
-//   const answer = employees.filter(
-//     (employee) =>
-//       employee.department === department && employee.salary > thresholdSalary
-//   );
-//   return answer;
-// };
-// console.log("Finance", highPaidEmployees(employees, "Finance", 90000));
-// console.log("Engineering", highPaidEmployees(employees, "Engineering", 90000));
-// Task 2 Find top performers employee
-
-// const topPerformersReport = (employees, minRating) => {
-//   const topPerformers = employees
-//     .filter((employee) => employee.performanceRating >= minRating)
-//     .map(({ name, performanceRating }) => ({ name, performanceRating }));
-//   return topPerformers;
-// };
-// console.log(topPerformersReport(employees, 4.8));
-
-// task write a function calculateCategoryCosts return a object of {name: name, totalcost:???}
